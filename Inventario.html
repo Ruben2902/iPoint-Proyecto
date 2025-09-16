@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Agregar Productos</title>
+     <nav>
+        <div class="logo">
+            <img src="/img/logo-web-footer.png" alt="Logo de iPoint">
+  <ul>
+    <li><a href="./index.html">Inicio</a></li>
+    <li><a href="#ventas">Ventas</a></li>
+    <li><a href="./Inventario.html">Inventario</a></li>
+  </ul>
+</nav>
+</head>
+<body>
+    <div class="container">
+        <h2>Agregar Producto</h2>
+        <form id="agregarProductoForm">
+            <input type="text" id="serial" placeholder="Serial" maxlength="10">
+            <input type="text" id="name" placeholder="Nombre">
+            <input type="text" id="partNumber" placeholder="Part Number" maxlength="9">
+            <!--
+            <input type="text" id="model" placeholder="Modelo" required>
+            <input type="text" id="cpu" placeholder="CPU" required>
+            <input type="text" id="ram" placeholder="RAM" required>
+            <input type="text" id="storage" placeholder="Almacenamiento" required>
+            <input type="text" id="imagen" placeholder="URL de la imagen" required>
+            -->
+            <button type="submit">Agregar Producto</button>
+        </form>
+    </div>
+    <div class="tabla-contenedor">    
+        <table id="tablaElementos">
+            <thead>
+                <tr>  
+                    <th>ID</th>
+                    <th>Serial</th>
+                    <th>Nombre</th>
+                    <th>Part Number</th>
+                    <th id="Eliminar"></th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <!-- Filas agregadas dinámicamente -->
+            </tbody>
+        </table>
+    </div>
+    <script src="script1.js"></script>
+</body>
+</html>

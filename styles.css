@@ -1,0 +1,150 @@
+/* styles.css */
+.logo {
+    display: flex;
+    align-items: center;
+    height: auto;
+}  
+nav {
+  background: rgba(255,255,255,0.15); /* Transparente cristal */
+  backdrop-filter: blur(8px);         /* Efecto desenfoque */
+  -webkit-backdrop-filter: blur(8px); /* Compatibilidad Safari */
+  border-radius: 16px;                /* Bordes redondeados */
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 0.5rem 2rem;
+  margin: 1rem auto;
+  max-width: 800px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+nav a {
+  color: #222;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
+}
+
+nav a:hover,
+nav a:focus {
+  background: rgba(255,255,255,0.35);
+  color: #0077ff;
+}
+
+body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #e3f2fd, #f0f4f8);
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: rgba(255,255,255,0.15); /* Transparente cristal */
+            backdrop-filter: blur(8px);         /* Efecto desenfoque */
+            padding: 20px;
+            border-radius: 15px;
+            max-width: 450px;
+            margin: 30px auto;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        h2 { color: #000000; }
+        .opciones {
+            margin: 10px 0;
+            text-align: left;
+        }
+        input[type="text"] {
+            padding: 10px;
+            width: 80%;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            outline: none;
+        }
+        button {
+            align-items: center;
+            appearance: none;
+            background-color: #fff;
+            border-radius: 24px;
+            border-style: none;
+            box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+            box-sizing: border-box;
+            color: #3c4043;
+            cursor: pointer;
+            display: inline-flex;
+            fill: currentcolor;
+            font-family: "Google Sans",Roboto,Arial,sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            height: 48px;
+            justify-content: center;
+            letter-spacing: .25px;
+            line-height: normal;
+            max-width: 100%;
+            overflow: visible;
+            padding: 2px 24px;
+            position: relative;
+            text-align: center;
+            text-transform: none;
+            transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            width: auto;
+            will-change: transform,opacity;
+            z-index: 0;
+        }
+        button:hover {
+            background: #F6F9FE;
+            color: #174ea6;
+        }
+
+        table {
+            border: 1px solid #000000;
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            text-align: center;
+            vertical-align: middle;
+            border: 1px solid #000000;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .tabla-contenedor {
+            width: 1000px;           /* Cambia el ancho según lo que necesites */
+            margin: 40px auto;      /* Centra el contenedor horizontalmente */
+            padding: 16px;
+            background: #f9f9f9;    /* Opcional: color de fondo */
+            border-radius: 8px;     /* Opcional: bordes redondeados */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+
+        #resultado {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .mac-info {
+            text-align: left;
+            background: #f7f7f7;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        .mac-info img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .error { color: red; font-weight: bold; }
+
+    }
