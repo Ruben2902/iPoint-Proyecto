@@ -41,8 +41,6 @@ nav a:focus {
 }
 
 body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #e3f2fd, #f0f4f8);
             text-align: center;
             padding: 20px;
         }
