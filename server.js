@@ -1,33 +1,29 @@
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT || 3000;
-const fs = require('fs');
 const path = require('path');
 
-// Carpeta pública
-app.use(express.static('public'));
+const port = process.env.PORT ?? 2929; //; puerto del servidor
 
-// Ruta principal
+app.use(express.urlencoded({ extended: true })) //; para manejar datos de formularios
+app.use(express.json()); //; para manejar datos JSON
+
+//; sirve archivos estáticos desde la carpeta 'public'
+app.use(express.static(path.join(__dirname, 'public')));
+
+//; página principal
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/public/index.html');
+    res.sendFile(path.join(__dirname, 'public', 'Index.html'));
+    console.log('Request received', req.url);
 });
 
-app.listen(PORT, () => {
-  console.log(`Servidor activo en puerto ${PORT}`);
+//; ruta para la vista de inventario
+app.get('/inventario', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'Inventario.html'));
+    console.log('Request received', req.url);
 });
 
-// Ruta API
-//app.get('/ipoint-proyecto/inventory', (req, res) => {
-  //const filePath = path.join(__dirname, 'inventory.json');
 
-  //fs.readFile(filePath, 'utf8', (err, data) => {
-    //if (err) {
-      //console.error('Error leyendo inventario:', err);
-      //return res.status(500).json({ error: 'No se pudo leer el inventario' });
-    //}
-
-    //res.type('application/json').send(data);
-  //});
-//});
-
+app.listen(port, () => {//; el servidor escucha en el puerto definido
+    console.log(`Server running at http://localhost:${port}/`); //; muestra en consola la url del servidor
+});
 
