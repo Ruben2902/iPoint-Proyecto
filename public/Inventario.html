@@ -1,58 +1,92 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Agregar Productos</title>
-   <!--<nav>
-        <div class="logo">
-            <img src="/img/logo-web-footer.png" alt="Logo de iPoint">
-  <ul>
-    <li><a href="./index.html">Inicio</a></li>
-    <li><a href="#ventas">Ventas</a></li>
-    <li><a href="./Inventario.html">Inventario</a></li>
-  </ul>
-</nav> -->
-</head>
-<body>
-    <div class="container">
-        <h2>Agregar Producto</h2>
-        <form id="agregarProductoForm">
-            <input type="text" id="id" placeholder="Identificador" required>
-            <input type="text" id="category" placeholder="Categoría" required>
-            <input type="text" id="serial" placeholder="Serial" maxlength="10">
-            <input type="text" id="productName" placeholder="Nombre">
-            <input type="text" id="partNumber" placeholder="Part Number" maxlength="9">
-            
-            <!--
-            <input type="text" id="model" placeholder="Modelo" required>
-            <input type="text" id="cpu" placeholder="CPU" required>
-            <input type="text" id="ram" placeholder="RAM" required>
-            <input type="text" id="storage" placeholder="Almacenamiento" required>
-            <input type="text" id="imagen" placeholder="URL de la imagen" required>
-            -->
-            <button type="submit">Agregar Producto</button>
-            <button type="button" onclick="descargarJSON()">Descargar JSON</button>
+  </head>
+
+  <body>
+    <header>
+      <nav class="nav" aria-label="Navegación principal">
+        <a class="logo" href="https://www.ipoint.pe" aria-label="Ir a iPoint">
+          <img src="/public/ipoint.png" alt="Logo de iPoint" />
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="./Index.html">Inicio</a></li>
+          <li><a href="#ventas">Ventas</a></li>
+          <li><a href="./Inventario.html" aria-current="page">Inventario</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="page" role="main">
+      <!-- Card: Formulario -->
+      <section class="card" aria-labelledby="title-inventario">
+        <h2 id="title-inventario">Agregar Producto</h2>
+
+        <form id="agregarProductoForm" autocomplete="off">
+          <div class="field">
+            <label class="label" for="id">Identificador</label>
+            <input type="text" id="id" placeholder="Ej: 101" required />
+          </div>
+
+          <div class="field">
+            <label class="label" for="category">Categoría</label>
+            <input type="text" id="category" placeholder="Ej: MacBook" required />
+          </div>
+
+          <div class="field">
+            <label class="label" for="serial">Serial</label>
+            <input type="text" id="serial" placeholder="Máx. 10 caracteres" maxlength="10" />
+          </div>
+
+          <div class="field">
+            <label class="label" for="productName">Nombre</label>
+            <input type="text" id="productName" placeholder="Ej: MacBook Pro 14”" />
+          </div>
+
+          <div class="field">
+            <label class="label" for="partNumber">Part Number</label>
+            <input type="text" id="partNumber" placeholder="Máx. 9 caracteres" maxlength="9" />
+          </div>
+
+          <div class="actions">
+            <button class="btn" type="submit">Agregar Producto</button>
+            <button class="btn btn-secondary" type="button" onclick="descargarJSON()">
+              Descargar JSON
+            </button>
+          </div>
         </form>
-    </div>
-    <div class="tabla-contenedor">    
-        <table id="tablaElementos">
+      </section>
+
+      <!-- Tabla -->
+      <section class="tabla-contenedor" aria-labelledby="title-tabla">
+        <h2 id="title-tabla" style="margin: 0 0 12px">Productos</h2>
+
+        <div style="overflow-x: auto">
+          <table id="tablaElementos">
             <thead>
-                <tr>  
-                    <th>ID</th>
-                    <th>Categoría</th>
-                    <th>Serial</th>
-                    <th>Nombre</th>
-                    <th>Part Number</th>
-                    <th>Acciones</th>
-                </tr>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Categoría</th>
+                <th scope="col">Serial</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Part Number</th>
+                <th scope="col">Acciones</th>
+              </tr>
             </thead>
+
             <tbody id="tableBody">
-                <!-- Filas agregadas dinámicamente -->
+              <!-- Filas agregadas dinámicamente -->
             </tbody>
-        </table>
-    </div>
+          </table>
+        </div>
+      </section>
+    </main>
+
     <script src="script1.js"></script>
-</body>
+  </body>
 </html>

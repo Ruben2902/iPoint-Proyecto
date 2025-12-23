@@ -1,33 +1,59 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Buscador MacBook Pro</title>
-    <nav>
-        <div class="logo">
-            <img src="/img/logo-web-footer.png" alt="Logo de iPoint">
-  <ul>
-    <li><a href="https://www.ipoint.pe">Inicio</a></li>
-    <li><a href="#ventas">Ventas</a></li>
-    <li><a href="./Inventario.html">Inventario</a></li>
-  </ul>
-</nav>
-</head>
-<body>
-    <div class="container">
-        <h2>Buscar producto</h2>
-        <div class="opciones">
-            <label><input type="radio" name="tipoBusqueda" value="serial" checked> Serial</label><br>
-            <label><input type="radio" name="tipoBusqueda" value="modelo"> Nombre</label><br>
-            <label><input type="radio" name="tipoBusqueda" value="partNumber"> Part Number</label>
+  </head>
+
+  <body>
+    <header>
+      <nav class="nav">
+        <a class="logo" href="https://www.ipoint.pe" aria-label="Ir a iPoint">
+          <img src="/public/ipoint.png" alt="Logo de iPoint" />
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="https://www.ipoint.pe">Inicio</a></li>
+          <li><a href="#ventas">Ventas</a></li>
+          <li><a href="./Inventario.html">Inventario</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="page" role="main">
+      <section class="card" aria-labelledby="title">
+        <h2 id="title">Buscar producto</h2>
+
+        <div class="opciones" role="radiogroup" aria-label="Tipo de búsqueda">
+          <label class="radio">
+            <input type="radio" name="tipoBusqueda" value="serial" checked />
+            <span>Serial</span>
+          </label>
+
+          <label class="radio">
+            <input type="radio" name="tipoBusqueda" value="modelo" />
+            <span>Nombre</span>
+          </label>
+
+          <label class="radio">
+            <input type="radio" name="tipoBusqueda" value="partNumber" />
+            <span>Part Number</span>
+          </label>
         </div>
-        <input type="text" id="datoInput" placeholder="Ingresa el dato">
-        <button onclick="buscarMac()">Buscar</button>
-        <div id="resultado"></div>
-    </div>
-    </div>
+
+        <div class="field">
+          <label for="datoInput" class="label">Dato</label>
+          <input type="text" id="datoInput" placeholder="Ingresa el dato" />
+        </div>
+
+        <button class="btn" type="button" onclick="buscarMac()">Buscar</button>
+
+        <div id="resultado" class="resultado" aria-live="polite"></div>
+      </section>
+    </main>
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

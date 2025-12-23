@@ -1,0 +1,27 @@
+{
+  "name": "ipoint-proyecto",
+  "version": "1.0.0",
+  "description": "Aplicación web estática (prototipo) para apoyar a iPoint en la identificación rápida de productos y una gestión básica de inventario. Está pensada para uso interno de ventas y soporte mientras se define una integración con una fuente de datos real.",
+  "main": "server.js",
+  "scripts": {
+    "devStart": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ruben2902/iPoint-Proyecto.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Ruben2902/iPoint-Proyecto/issues"
+  },
+  "homepage": "https://github.com/Ruben2902/iPoint-Proyecto#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}
