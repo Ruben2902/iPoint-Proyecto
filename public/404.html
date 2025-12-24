@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>404 · Página no encontrada</title>
+  </head>
+
+  <body>
+    <header>
+      <nav class="nav" aria-label="Navegación principal">
+        <a class="logo" href="./Index.html" aria-label="Ir al inicio">
+          <img src="/img/ipoint.png" alt="Logo de iPoint" />
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="./Index.html">Inicio</a></li>
+          <li><a href="./Inventario.html">Inventario</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="page" role="main">
+      <section class="card" aria-labelledby="title-404" style="text-align: center">
+        <!-- Ícono 404 -->
+        <div
+          aria-hidden="true"
+          style="
+            width: 90px;
+            height: 90px;
+            margin: 0 auto 18px;
+            border-radius: 999px;
+            display: grid;
+            place-items: center;
+            background: rgba(37, 99, 235, 0.08);
+            border: 1px solid rgba(37, 99, 235, 0.18);
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #2563eb;
+          "
+        >
+          404
+        </div>
+
+        <h1 id="title-404">Página no encontrada</h1>
+
+        <p style="margin: 10px 0 22px; color: #475569">
+          La ruta que intentas visitar no existe o fue movida.
+          <br />
+          Puedes volver al inicio para continuar.
+        </p>
+
+        <!-- Botón volver al inicio -->
+        <a href="./Index.html" class="btn" role="button">
+          Volver al inicio
+        </a>
+
+        <p style="margin-top: 16px; font-size: 0.9rem; opacity: 0.75">
+          Error 404 · iPoint
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

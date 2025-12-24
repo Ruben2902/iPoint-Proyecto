@@ -49,7 +49,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 14px;
+  gap: 20px;
 
   background: rgba(255, 255, 255, 0.55);
   border: 1px solid rgba(15, 23, 42, 0.08);
@@ -79,9 +79,10 @@ body {
   padding: 0;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   flex-wrap: wrap;
   justify-content: flex-end;
+  margin-left: auto; /* separa enlaces del logo */
 }
 
 .nav-links a {
@@ -266,6 +267,7 @@ button:focus-visible {
   width: min(1000px, 100%);
   margin: 30px auto;
   padding: 16px;
+  overflow: hidden;
   background: rgba(255, 255, 255, 0.65);
   border: 1px solid rgba(15, 23, 42, 0.08);
   border-radius: 16px;
@@ -299,7 +301,58 @@ th {
 }
 
 /* ===== RESPONSIVE ===== */
-@media (max-width: 520px) {
+@media (max-width: 900px) {
+  body {
+    padding: 18px;
+  }
+  .nav {
+    max-width: 100%;
+    padding: 10px 12px;
+    gap: 14px;
+  }
+  .nav-links {
+    gap: 10px;
+  }
+  .nav-links a {
+    padding: 9px 10px;
+    font-size: 0.94rem;
+  }
+  .tabla-contenedor {
+    margin: 20px auto;
+    padding: 14px;
+  }
+}
+
+@media (max-width: 720px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav-links {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left: 0;
+  }
+  .nav-links a {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+  .card {
+    box-shadow: 0 14px 36px rgba(15, 23, 42, 0.12);
+  }
+  .tabla-contenedor {
+    width: 100%;
+    padding: 12px;
+  }
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 540px) {
   body {
     padding: 16px;
   }
@@ -308,5 +361,22 @@ th {
   }
   .logo img {
     height: 30px;
+  }
+  .nav-links {
+    gap: 6px;
+  }
+  .nav-links a {
+    padding: 8px 10px;
+    font-size: 0.9rem;
+  }
+  .page {
+    place-items: start;
+  }
+  .tabla-contenedor {
+    margin: 16px auto;
+  }
+  th,
+  td {
+    padding: 8px 10px;
   }
 }

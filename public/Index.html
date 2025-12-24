@@ -11,7 +11,7 @@
     <header>
       <nav class="nav">
         <a class="logo" href="https://www.ipoint.pe" aria-label="Ir a iPoint">
-          <img src="/public/ipoint.png" alt="Logo de iPoint" />
+          <img src="/img/ipoint.png" alt="Logo de iPoint" />
         </a>
 
         <ul class="nav-links">
@@ -26,26 +26,9 @@
       <section class="card" aria-labelledby="title">
         <h2 id="title">Buscar producto</h2>
 
-        <div class="opciones" role="radiogroup" aria-label="Tipo de búsqueda">
-          <label class="radio">
-            <input type="radio" name="tipoBusqueda" value="serial" checked />
-            <span>Serial</span>
-          </label>
-
-          <label class="radio">
-            <input type="radio" name="tipoBusqueda" value="modelo" />
-            <span>Nombre</span>
-          </label>
-
-          <label class="radio">
-            <input type="radio" name="tipoBusqueda" value="partNumber" />
-            <span>Part Number</span>
-          </label>
-        </div>
-
         <div class="field">
-          <label for="datoInput" class="label">Dato</label>
-          <input type="text" id="datoInput" placeholder="Ingresa el dato" />
+          <label for="datoInput" class="label">Datos</label>
+          <input type="text" id="datoInput" placeholder="Ingresa el nombre del producto" />
         </div>
 
         <button class="btn" type="button" onclick="buscarMac()">Buscar</button>

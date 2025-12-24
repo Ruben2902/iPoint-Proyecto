@@ -57,17 +57,4 @@ tableBody.addEventListener('click', function(e) { //funcion para eliminar filas 
     }
 });
 
-// Función para descargar el inventario como un archivo JSON
-const downloadJSON = () => {
-    const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(inventory, null, 2));
-    const downloadAnchorNode = document.createElement('a');
-    downloadAnchorNode.setAttribute("href", dataStr);
-    downloadAnchorNode.setAttribute("download", "inventario.json");
-    document.body.appendChild(downloadAnchorNode);
-    downloadAnchorNode.click();
-    downloadAnchorNode.remove();
-};
-
-// Alias para compatibilidad con el HTML (onclick="descargarJSON()")
-const descargarJSON = downloadJSON;
 

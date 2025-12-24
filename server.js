@@ -22,8 +22,12 @@ app.get('/inventario', (req, res) => {
     console.log('Request received', req.url);
 });
 
+//; manejo de rutas no encontradas (siempre al final)
+app.use((req, res) => {
+    res.status(404).sendFile(path.join(__dirname, 'public', '404.html'));
+});
+
 
 app.listen(port, () => {//; el servidor escucha en el puerto definido
     console.log(`Server running at http://localhost:${port}/`); //; muestra en consola la url del servidor
 });
-
