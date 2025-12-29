@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 
-const port = process.env.PORT ?? 2929; //; puerto del servidor
+const port = Number(process.env.PORT ?? 0); //; puerto del servidor
 
 app.use(express.urlencoded({ extended: true })) //; para manejar datos de formularios
 app.use(express.json()); //; para manejar datos JSON
@@ -28,6 +28,7 @@ app.use((req, res) => {
 });
 
 
-app.listen(port, () => {//; el servidor escucha en el puerto definido
-    console.log(`Server running at http://localhost:${port}/`); //; muestra en consola la url del servidor
+const server = app.listen(port, () => {//; el servidor escucha en el puerto definido
+    const actualPort = server.address().port; //; obtiene el puerto asignado
+    console.log(`Server running at http://localhost:${actualPort}/`); //; muestra en consola la url del servidor
 });
